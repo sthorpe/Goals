@@ -4,8 +4,12 @@ class User < ActiveRecord::Base
   include Authentication
   include Authentication::ByPassword
   include Authentication::ByCookieToken
+<<<<<<< HEAD:app/models/user.rb
   include Authorization::AasmRoles
 
+=======
+  include Authorization::StatefulRoles
+>>>>>>> 3b9da87bd051514d284a67f9571ae5eb79897c73:app/models/user.rb
   validates_presence_of     :login
   validates_length_of       :login,    :within => 3..40
   validates_uniqueness_of   :login
